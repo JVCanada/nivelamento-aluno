@@ -14,7 +14,7 @@ anoMeses = 12
 idade = 20
 qtdChocholate = 80
 anosVida = 50
-idadeSegundos = 1232000000
+idadeSegundos = 1232000000.00
 
 
 # 1:
