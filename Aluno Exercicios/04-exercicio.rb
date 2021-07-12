@@ -29,4 +29,10 @@ end
 
 puts "Diametro do circulo: " + diametro_circulo(5).to_s 
 puts "Comprimento do circulo: " + comprimento_circulo(10).to_s
-puts "Área do circulo: " + area_circulo(5).to_s      
+puts "Área do circulo: " + area_circulo(5).to_s
+    
+puts "--------------------------------------------------------------------------------------------"
+
+puts "Diametro do circulo: " + diametro_circulo(10).to_s 
+puts "Comprimento do circulo: " + comprimento_circulo(25).to_s
+puts "Área do circulo: " + area_circulo(10).to_s 
