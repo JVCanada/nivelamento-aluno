@@ -49,11 +49,8 @@ segundosIdade = idadeAnos * 86400
 puts segundosIdade
 
 #4:
-def qtd_anos_segundos(anos)
-    anosDias = anos * 365
-    return anosDias
+def qtd_anos_segundos(segundosAnosSegundos)
+    return segundosAnosSegundos / 60.0 / 60.0 / 24.0 / 365.0
 end
 
-anosDias = qtd_anos_segundos(20)
-segundosAno = anosDias * 86400
-puts segundosAno
+puts qtd_anos_segundos(1200000000)
