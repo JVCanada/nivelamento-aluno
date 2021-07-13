@@ -25,7 +25,7 @@ raio = gets.to_i
 
 puts "O diametro é: " + diametro_circulo(raio).to_s
 puts "O comprimento é: " + comprimento_circulo(raio).to_s
-puts "O área é: " + area_circulo(raio).to_s
+puts "A área é: " + area_circulo(raio).to_s
 
 
 
