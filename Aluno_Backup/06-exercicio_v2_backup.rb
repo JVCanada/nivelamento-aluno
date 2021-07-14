@@ -36,30 +36,30 @@
 def fase_pandemica(taxa_de_vacinacao, fator_de_transmissao, taxa_ocupacao_leitos)
     if taxa_de_vacinacao >= 0 && taxa_de_vacinacao <= 1
         if taxa_de_vacinacao > 0.8
-            return "No momento, a fase é: AZUL"
+            puts "AZUL"
         else
             if taxa_ocupacao_leitos >= 0 && taxa_ocupacao_leitos <= 1 
                 if fator_de_transmissao >= 0
                     if fator_de_transmissao < 1 && taxa_ocupacao_leitos <= 0.5
-                        return "No momento, a fase é: VERDE"
+                        puts "VERDE"
                     elsif fator_de_transmissao < 1 && taxa_ocupacao_leitos > 0.5 && taxa_ocupacao_leitos <= 0.65
-                        return "No momento, a fase é: AMARELA"
+                        puts "AMARELA"
                     elsif fator_de_transmissao < 1 && taxa_ocupacao_leitos > 0.65 && taxa_ocupacao_leitos <= 0.8
-                        return "No momento, a fase é: LARANJA"
+                        puts "LARANJA"
                     elsif fator_de_transmissao >= 1 || taxa_ocupacao_leitos > 0.8 && taxa_ocupacao_leitos <= 0.9
-                        return "No momento, a fase é: VERMELHA"
+                        puts "VERMELHA"
                     elsif taxa_ocupacao_leitos > 0.9 && taxa_ocupacao_leitos < 1
-                        return "No momento, a fase é: ROXA"
+                        puts "ROXA"
                     end
                 else
-                    return "Valor de fator de transmissão invalido!"
+                    puts "Valor de fator de transmissão invalido!"
                 end
             else
-                return "Valor de ocupação de leitos invalido!"
+                puts "Valor de ocupação de leitos invalido!"
             end
         end
     else
-        return "Valor de taxa de vacinação invalido!"
+        puts "Valor de taxa de vacinação invalido!"
     end 
 
 end
@@ -70,15 +70,18 @@ taxa_de_vacinacao = gets.to_f
 if taxa_de_vacinacao > 0.8
     fator_de_transmissao = 0
     taxa_ocupacao_leitos = 0
-    resultado_fase1 = fase_pandemica(taxa_de_vacinacao, fator_de_transmissao, taxa_ocupacao_leitos)
-else taxa_de_vacinacao <= 0.8
+    
+    print "A fase atual é: "
+    resultado_fase = fase_pandemica(taxa_de_vacinacao, fator_de_transmissao, taxa_ocupacao_leitos)
+elsif taxa_de_vacinacao <= 0.8
     print "Insira o fator de transmissão: "
     fator_de_transmissao = gets.to_f
 
     print "Insira a taxa de ocupação de leitos: "
     taxa_ocupacao_leitos = gets.to_f
 
-    resultado_fase2 = fase_pandemica(taxa_de_vacinacao, fator_de_transmissao, taxa_ocupacao_leitos)
+    print "A fase atual é: "
+    resultado_fase = fase_pandemica(taxa_de_vacinacao, fator_de_transmissao, taxa_ocupacao_leitos)
 end
 
 
