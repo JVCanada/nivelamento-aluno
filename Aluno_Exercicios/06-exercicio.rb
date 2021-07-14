@@ -36,8 +36,6 @@
 def fase_pandemica(taxa_de_vacinacao, fator_de_transmissao, taxa_ocupacao_leitos)
     if taxa_de_vacinacao >= 0 && taxa_de_vacinacao <= 1
         if taxa_de_vacinacao > 0.8
-            fator_de_transmissao = 0
-            taxa_ocupacao_leitos = 0
             return "AZUL"
         else
             if taxa_ocupacao_leitos >= 0 && taxa_ocupacao_leitos <= 1 
