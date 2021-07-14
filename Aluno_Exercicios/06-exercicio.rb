@@ -65,7 +65,7 @@ def fase_pandemica(taxa_de_vacinacao, fator_de_transmissao, taxa_ocupacao_leitos
 end
 
 print "A fase atual é: "
-puts fase_pandemica(0.9,0.0,0.0)
+puts fase_pandemica(0.9,0.6,1.0)
 
 print "A fase atual é: "
 puts fase_pandemica(0.7,0.3,0.4)
@@ -81,6 +81,8 @@ puts fase_pandemica(0.7,0.6,0.85)
 
 print "A fase atual é: "
 puts fase_pandemica(0.7,0.6,0.92)
+
+# Parametros que trazem erro:
 
 print "A fase atual é: "
 puts fase_pandemica(2.0,0.6,0.6)
