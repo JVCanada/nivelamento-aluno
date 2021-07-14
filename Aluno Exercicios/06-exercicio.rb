@@ -36,30 +36,30 @@
 def fase_pandemica(taxa_de_vacinacao, fator_de_transmissao, taxa_ocupacao_leitos)
     if taxa_de_vacinacao >= 0 && taxa_de_vacinacao <= 1
         if taxa_de_vacinacao > 0.8
-            puts "No momento, a fase é: AZUL"
+            return "No momento, a fase é: AZUL"
         else
             if taxa_ocupacao_leitos >= 0 && taxa_ocupacao_leitos <= 1 
                 if fator_de_transmissao >= 0
                     if fator_de_transmissao < 1 && taxa_ocupacao_leitos <= 0.5
-                        puts "No momento, a fase é: VERDE"
+                        return "No momento, a fase é: VERDE"
                     elsif fator_de_transmissao < 1 && taxa_ocupacao_leitos > 0.5 && taxa_ocupacao_leitos <= 0.65
-                        puts "No momento, a fase é: AMARELA"
+                        return "No momento, a fase é: AMARELA"
                     elsif fator_de_transmissao < 1 && taxa_ocupacao_leitos > 0.65 && taxa_ocupacao_leitos <= 0.8
-                        puts "No momento, a fase é: LARANJA"
+                        return "No momento, a fase é: LARANJA"
                     elsif fator_de_transmissao >= 1 || taxa_ocupacao_leitos > 0.8 && taxa_ocupacao_leitos <= 0.9
-                        puts "No momento, a fase é: VERMELHA"
+                        return "No momento, a fase é: VERMELHA"
                     elsif taxa_ocupacao_leitos > 0.9 && taxa_ocupacao_leitos < 1
-                        puts "No momento, a fase é: ROXA"
+                        return "No momento, a fase é: ROXA"
                     end
                 else
-                    puts "Valor de fator de transmissão invalido!"
+                    return "Valor de fator de transmissão invalido!"
                 end
             else
-                puts "Valor de ocupação de leitos invalido!"
+                return "Valor de ocupação de leitos invalido!"
             end
         end
     else
-        puts "Valor de taxa de vacinação invalido!"
+        return "Valor de taxa de vacinação invalido!"
     end 
 
 end
