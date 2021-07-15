@@ -26,5 +26,5 @@ n1 = gets.chomp.to_i
 print "Insira o segundo valor: "
 n2 = gets.chomp.to_i
 
-puts calculo_mmc(n1,n2)
+puts "MMC " + n1.to_s + ", " + n2.to_s + " = " + calculo_mmc(n1,n2).to_s
 

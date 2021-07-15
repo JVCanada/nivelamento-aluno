@@ -17,5 +17,5 @@ i = 0
 while i < 10
     i += 1
     numero_r = numero * i
-    puts numero_r
+    puts numero.to_s + " X " + i.to_s + " = " + numero_r.to_s
 end
