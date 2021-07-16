@@ -31,7 +31,6 @@ until chute.to_i == numero
 
     puts "Tente novamente!"
 
-    numero = rand(0..100)
     puts "(" + numero.to_s + ")"
 
     chute = gets.chomp
