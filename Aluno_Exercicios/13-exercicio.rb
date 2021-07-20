@@ -17,17 +17,23 @@ def exibe_array(array)
 end
 
 def remove_da_posicao(array, posicao)
-    if posicao >= array.size || posicao == 1
+    if posicao >= array.size || posicao == 0
         return array
     else
         novo_array = []
-        for n in (0..array.size-2)
-            novo_array[n] = array[n]
+        # se o elemento do array original é o que esta na posição=-alvo, ignore esse elemento
+        for n in (0..array.size-1)
+            if n == posicao
+                novo_array[n-posicao] = array[posicao-n] # aqui esta a chave!!!!!!
+            else      
+                novo_array[n] = array[n]
+            end
         end
     return novo_array
     end
 end
 
+# indices: 0  1  2  3  4  5
 numeros = [1, 2, 3, 4, 5, 6]
 exibe_array(numeros)
 puts numeros.size
@@ -36,7 +42,4 @@ numeros = remove_da_posicao(numeros, 3)
 exibe_array(numeros)
 puts numeros.size
 
-# n = 6
-# posicao = 3
-# enquanto n != 3
 
