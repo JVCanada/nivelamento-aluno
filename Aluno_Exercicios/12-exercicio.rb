@@ -18,24 +18,34 @@ def exibe_array(array)
 end
 
 def insere_no_array(array, valor, posicao)
-
-    if posicao < array.size
-        n = array.size
+    n = array.size
+    if posicao < n
         while n > posicao
             array[n] = array[n-1]
             n = n - 1
         end
-    array[posicao] = valor
-    return true
+        array[posicao] = valor
+        return true
     else
         return false
     end
- 
 end
 
 a1 = [33, 20, -1, -500, 45, 100]
-# exibe_array(a1)
+exibe_array(a1)
+puts a1.size
+
+puts "Sua array após a adição ficou: "
 
 insere_no_array(a1, 555, 2)
 exibe_array(a1)
-print a1.size
+puts a1.size
+
+insere_no_array(a1, 555, 10)
+exibe_array(a1)
+puts a1.size
+
+insere_no_array(a1, 655, 4)
+exibe_array(a1)
+puts a1.size
+
