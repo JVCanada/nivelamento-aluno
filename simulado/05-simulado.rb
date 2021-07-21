@@ -11,16 +11,17 @@
 # puts(mediana([10, 0, -1, -500, 20]))      # deve imprimir 0.0
 
 def mediana(array)
-    array.sort()
-    print array
-    qtdElementos = array.size - 1
+    nova_array = array.sort()
+    qtdElementos = nova_array.size 
     valorParImpar = qtdElementos % 2
     if valorParImpar == 0
         mediana = ((qtdElementos / 2) - 1) + (qtdElementos / 2)
     else
-        qtdElementos / 2
+        mediana = nova_array[qtdElementos/2]
     end
     return mediana
 end
 
 puts(mediana([10, 0, -1, -500, 20]))      # deve imprimir 0.0
+puts
+puts(mediana([10, 0, -1, -500, 20, 100])) # deve imprimir 5.0
