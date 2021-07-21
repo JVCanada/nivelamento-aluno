@@ -6,6 +6,11 @@
 #     print(menor_maior([10, 0, -1, -500, 20, 100])) # deve imprimir [-500, 100]
 #     puts
 
+
+
+
+# não consegui realizar a sequencia de verificação dos valores no array.
+
 def menor_maior(array)
     novo_array = [0..1]
     qtdElementos = array.size
@@ -20,5 +25,5 @@ def menor_maior(array)
     print novo_array[0..1]
 end
     
-print(menor_maior([10, 0, -1, -500, 20, 100]))
+print menor_maior([10, 0, -1, -500, 20, 100])
 puts

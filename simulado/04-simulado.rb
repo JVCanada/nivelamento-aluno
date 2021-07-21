@@ -17,6 +17,8 @@
 # imprimir_tabela(0) # deve ser impresso na tela: 
 # ARGUMENTO INVÁLIDO
 
+# não consegui relacionar as linhas com o padrão da regra.
+
 def imprimir_tabela(numero)
     if numero > 0
         linhas = 1

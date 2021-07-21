@@ -8,8 +8,7 @@
 # # deve imprimir o array [0.5, 0.25, 0.25]
 # # pois há 50% de números positivos no array, 25% de números zero e 25% de números negativos
 
-# FAZER CONTA PARA ACHAR PERCENTUAL
-
+# não consegui encontrar a melhor maneira de encontrar o percentual.
 
 def negativos_positivos(array)
     novo_array = []
@@ -26,7 +25,7 @@ def negativos_positivos(array)
             k += 1
         end
     end
-    return novo_array[0.2] = novo_array[i,j,k]
+    return novo_array[0..2] = novo_array[i,j,k]
 end
 
 print(negativos_positivos([1, 2, 0, -1]))
