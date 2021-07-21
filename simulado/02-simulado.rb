@@ -8,18 +8,25 @@
 # # deve imprimir o array [0.5, 0.25, 0.25]
 # # pois há 50% de números positivos no array, 25% de números zero e 25% de números negativos
 
+# FAZER CONTA PARA ACHAR PERCENTUAL
+
+
 def negativos_positivos(array)
     novo_array = []
-    for n in (0..array.size-1)
+    qtdElementos = array.size
+    i = 0
+    j = 0
+    k = 0
+    for n in (0..qtdElementos-1)
         if array[n] > 0
-            novo_array[0] = array[]
+            i += 1
         elsif array[n] == 0
-            novo_array[1] = array[n+1/n]
+            j += 1
         else
-            novo_array[2] = array[n+1/n]
+            k += 1
         end
     end
-    return novo_array
+    return novo_array[0.2] = novo_array[i,j,k]
 end
 
 print(negativos_positivos([1, 2, 0, -1]))

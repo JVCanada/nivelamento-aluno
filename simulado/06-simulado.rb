@@ -8,16 +8,17 @@
 
 def menor_maior(array)
     novo_array = [0..1]
-    for n in (0..array.size-1)
+    qtdElementos = array.size
+    for n in (0..qtdElementos-2)
         if array[n] > array[n+1]
-            novo_array[0] = array[n]
+            novo_array[1] = array[n]
         elsif array[n] < array[n+1]
             novo_array[0] = array[n]
         else
-            next
         end
     end
-    return novo_array
+    print novo_array[0..1]
 end
     
 print(menor_maior([10, 0, -1, -500, 20, 100]))
+puts

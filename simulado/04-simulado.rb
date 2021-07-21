@@ -19,10 +19,14 @@
 
 def imprimir_tabela(numero)
     if numero > 0
-        for x in (1..numero)
-            for y in (1..numero)
-                puts x * y
-            end
+        linhas = 1
+        i = 0
+
+        while i < numero
+            i += 1
+            linhas += 1
+            resultado = linhas * i
+            puts resultado
         end
     else
         puts "ARGUMENTO INVÁLIDO"
@@ -32,17 +36,3 @@ end
 imprimir_tabela(5)
 imprimir_tabela(0)
 
-# def imprimir_tabela(numero)
-#     for x in (1..numero)
-#         for y in (1..numero)
-#             if y >= 2 && y <= 9 && x >= 2 && x <= 9
-#                 print "x"
-#             else
-#                 print "*"
-#             end
-#         end
-#         puts
-#     end       
-# end
-
-# imprimir_tabela(5)
