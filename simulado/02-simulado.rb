@@ -11,21 +11,40 @@
 # não consegui encontrar a melhor maneira de encontrar o percentual.
 
 def negativos_positivos(array)
-    novo_array = []
-    qtdElementos = array.size
-    i = 0
-    j = 0
-    k = 0
-    for n in (0..qtdElementos-1)
-        if array[n] > 0
-            i += 1
-        elsif array[n] == 0
-            j += 1
+    positivos = 0
+    negativos = 0
+    zeros = 0
+    for i in (0..array.size-1)
+        if array[i] > 0
+            positivos = positivos + 1
+        elsif array[i] < 0
+            negativos = negativos + 1
         else
-            k += 1
+            zeros = zeros + 1
         end
     end
-    return novo_array[0..2] = novo_array[i,j,k]
+    # resultado = [positivos / array.size, zeros / array.size, negativos / array]
+    resultado = []
+    resultado[0] = positivos.to_f / array.size 
+    resultado[1] = zeros.to_f / array.size
+    resultado[2] = negativos.to_f / array.size
+    return resultado
+
+    # novo_array = []
+    # qtdElementos = array.size
+    # i = 0
+    # j = 0
+    # k = 0
+    # for n in (0..qtdElementos-1)
+    #     if array[n] > 0
+    #         i += 1
+    #     elsif array[n] == 0
+    #         j += 1
+    #     else
+    #         k += 1
+    #     end
+    # end
+    # return novo_array[0..2] = novo_array[i,j,k]
 end
 
 print(negativos_positivos([1, 2, 0, -1]))

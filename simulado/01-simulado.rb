@@ -9,15 +9,20 @@
 # puts(preco_maca(10)) # deve imprimir 3.0
 
 def preco_maca(qtd_macas)
-    if qtd_macas >= 12
-        resultado = qtd_macas * 0.25
+    if qtd_macas <= 0
+        return nil
     else
-        resultado = qtd_macas * 0.30
+        if qtd_macas >= 12
+            resultado = qtd_macas * 0.25
+        else
+            resultado = qtd_macas * 0.30
+        end
+        return resultado
     end
-    return resultado
 end
 
 puts preco_maca(6)
 puts "O preço vai ser de: R$" + preco_maca(12).to_s 
 puts "O preço vai ser de: R$" + preco_maca(10).to_s 
 puts preco_maca(3)
+puts (preco_maca(0) == nil)

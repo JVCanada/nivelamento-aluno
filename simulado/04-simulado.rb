@@ -20,19 +20,32 @@
 # não consegui relacionar as linhas com o padrão da regra.
 
 def imprimir_tabela(numero)
-    if numero > 0
-        linhas = 1
-        i = 0
 
-        while i < numero
-            i += 1
-            linhas += 1
-            resultado = linhas * i
-            puts resultado
+    if numero > 0
+        for x in (1..numero)
+            for y in (1..x)
+                print x * y
+                print " "
+            end
+            puts
         end
     else
         puts "ARGUMENTO INVÁLIDO"
-    end      
+    end
+
+    # if numero > 0
+    #     linhas = 1
+    #     i = 0
+
+    #     while i < numero
+    #         i += 1
+    #         linhas += 1
+    #         resultado = linhas * i
+    #         puts resultado
+    #     end
+    # else
+    #     puts "ARGUMENTO INVÁLIDO"
+    # end      
 end
 
 imprimir_tabela(5)

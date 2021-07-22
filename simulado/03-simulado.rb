@@ -6,21 +6,27 @@
 # não consegui reunir os valores para aplicar a soma entre eles.
 
 def calcula_media(array)
-
-    nova_array = []
-    qtdElementos = array.size 
-    n = 0
-
-    while n < qtdElementos 
-        nova_array[n] = array[n] 
-        soma = nova_array[n] + nova_array[n+1]
-        n = n + 1
+    soma = 0.0
+    for i in (0..array.size-1)
+        soma = soma + array[i]
     end
-
-    if n == qtdElementos
-        media = somaTotal / qtdElementos
-    end
+    media = soma / array.size
     return media
+
+    # nova_array = []
+    # qtdElementos = array.size 
+    # n = 0
+
+    # while n < qtdElementos 
+    #     nova_array[n] = array[n] 
+    #     soma = nova_array[n] + nova_array[n+1]
+    #     n = n + 1
+    # end
+
+    # if n == qtdElementos
+    #     media = soma / qtdElementos
+    # end
+    # return media
 
 end
 
