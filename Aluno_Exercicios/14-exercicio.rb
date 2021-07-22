@@ -24,18 +24,16 @@ def obter_apostas(qtd, limite_inicio, limite_fim)
     return numeros_apostados
 end
 
-# até aqui, tudo certo!!
-
 def verificar_acertos(sorteados, apostados)
-    sorteados = numeros_sorteados
-    apostados = numeros_apostados
+    valorSorteados = sorteados.size
+    valorApostados = apostados.size
     numeros_acertados = []
-    for n in (0..sorteados-1)
-        for m in (0..apostados-1)
-            if numeros_apostados == numeros_sorteados
-                numeros_acertados[n] = numeros_sorteados[n]
-            else
-                next
+    i = 0
+    for x in (0..valorSorteados-1)
+        for y in (0..valorApostados-1)
+            if sorteados[x] == apostados[y]
+                numeros_acertados[i] = apostados[y]
+                i += 1
             end
         end
     end
@@ -44,6 +42,8 @@ end
 
 def mega_sena()
     sorteados = sortear_numeros(6, 1, 60)
+    print sorteados
+    puts
     apostados = obter_apostas(6, 1, 60)
     acertados = verificar_acertos(sorteados, apostados)
     puts "Numeros sorteados: #{sorteados.to_s()}"

@@ -28,12 +28,32 @@ def exibe_array(array)
     print("\n")
 end
 
+def remove_repetido(novo_baralho, p)
+    i = 0
+    j = 0
+    array_aux = []
+    while j < novo_baralho.size
+        if j == p
+            j += 1
+        elsif j >= novo_baralho.size
+            return array_aux
+        end
+        array_aux[i] = novo_baralho[j]
+
+    i += 1
+    j += 1
+
+    end
+    return array_aux
+end
+
 def embaralhador(baralho)
     novo_baralho = []
     for n in (1..baralho.size)
         i = baralho.size
         p = rand(1..i) - 1
         novo_baralho[n-1] = baralho[p]
+        baralho = remove_repetido(baralho,p)
     end
     return novo_baralho
     # implemente o algoritmo desta função
